@@ -1,177 +1,281 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Happy Mother's Day ❤️</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Happy Friendship Day | By Nikhil</title>
 
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
 
-  <style>
-    *{
-      margin:0;
-      padding:0;
-      box-sizing:border-box;
-      font-family:'Poppins',sans-serif;
-    }
+body{
+    height:100vh;
+    overflow:hidden;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    background:linear-gradient(135deg,#0f172a,#1e3a8a,#2563eb);
+    background-size:300% 300%;
+    animation:bgMove 10s ease infinite;
+}
 
-    body{
-      height:100vh;
-      display:flex;
-      justify-content:center;
-      align-items:center;
-      overflow:hidden;
-      background:linear-gradient(135deg,#ff9a9e,#fad0c4,#fad0c4,#fbc2eb);
-      position:relative;
-    }
+@keyframes bgMove{
+    0%{background-position:0% 50%;}
+    50%{background-position:100% 50%;}
+    100%{background-position:0% 50%;}
+}
 
-    .heart{
-      position:absolute;
-      color:rgba(255,255,255,0.7);
-      font-size:20px;
-      animation:float 8s linear infinite;
-    }
+/* Floating Particles */
 
-    @keyframes float{
-      0%{
-        transform:translateY(100vh) scale(0);
-        opacity:0;
-      }
-      30%{
+.particles{
+    position:absolute;
+    width:100%;
+    height:100%;
+    overflow:hidden;
+    z-index:0;
+}
+
+.particles span{
+    position:absolute;
+    bottom:-50px;
+    color:white;
+    font-size:22px;
+    animation:float linear infinite;
+}
+
+@keyframes float{
+    from{
+        transform:translateY(0) rotate(0deg);
         opacity:1;
-      }
-      100%{
-        transform:translateY(-120vh) scale(1.5);
+    }
+    to{
+        transform:translateY(-120vh) rotate(360deg);
         opacity:0;
-      }
     }
+}
 
-    .card{
-      width:90%;
-      max-width:700px;
-      padding:50px 40px;
-      border-radius:30px;
-      background:rgba(255,255,255,0.15);
-      backdrop-filter:blur(15px);
-      box-shadow:0 8px 32px rgba(0,0,0,0.2);
-      border:1px solid rgba(255,255,255,0.2);
-      text-align:center;
-      color:white;
-      animation:fadeIn 1.5s ease;
-    }
+/* Card */
 
-    @keyframes fadeIn{
-      from{
-        opacity:0;
-        transform:translateY(40px);
-      }
-      to{
-        opacity:1;
-        transform:translateY(0);
-      }
-    }
+.card{
+    position:relative;
+    width:360px;
+    height:500px;
+    perspective:1200px;
+    z-index:10;
+}
 
-    h1{
-      font-size:3rem;
-      margin-bottom:20px;
-      text-shadow:0 0 15px rgba(255,255,255,0.6);
-    }
+.inner{
+    position:relative;
+    width:100%;
+    height:100%;
+    transition:1s;
+    transform-style:preserve-3d;
+}
 
-    .subtitle{
-      font-size:1.2rem;
-      margin-bottom:30px;
-      opacity:0.9;
-    }
+.card:hover .inner{
+    transform:rotateY(180deg);
+}
 
-    .message{
-      font-size:1.1rem;
-      line-height:2;
-      font-weight:300;
-      color:#fff;
-    }
+.card.flip .inner{
+    transform:rotateY(180deg);
+}
 
-    .highlight{
-      font-weight:600;
-      color:#fff7f7;
-    }
+.side{
+    position:absolute;
+    width:100%;
+    height:100%;
+    border-radius:25px;
+    backface-visibility:hidden;
+    overflow:hidden;
+    box-shadow:0 20px 45px rgba(0,0,0,.45);
+}
 
-    .footer{
-      margin-top:35px;
-      font-size:1.3rem;
-      font-weight:600;
-    }
+/* Front */
 
-    .love{
-      font-size:2rem;
-      animation:pulse 1.5s infinite;
-      display:inline-block;
-    }
+.front{
+    background:linear-gradient(135deg,#38bdf8,#2563eb);
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    color:white;
+}
 
-    @keyframes pulse{
-      0%{
-        transform:scale(1);
-      }
-      50%{
-        transform:scale(1.2);
-      }
-      100%{
-        transform:scale(1);
-      }
-    }
+.front h1{
+    font-size:2.2rem;
+    text-align:center;
+    animation:glow 2s infinite alternate;
+}
 
-    @media(max-width:600px){
-      h1{
-        font-size:2.2rem;
-      }
+.front h2{
+    margin-top:15px;
+    font-size:80px;
+    animation:wave 1.5s infinite;
+}
 
-      .message{
-        font-size:1rem;
-      }
+.front p{
+    margin-top:20px;
+    opacity:.9;
+}
 
-      .card{
-        padding:35px 25px;
-      }
-    }
-  </style>
+@keyframes wave{
+    0%,100%{transform:rotate(0deg);}
+    25%{transform:rotate(-12deg);}
+    75%{transform:rotate(12deg);}
+}
+
+@keyframes glow{
+    from{text-shadow:0 0 10px white;}
+    to{text-shadow:0 0 30px cyan;}
+}
+
+/* Back */
+
+.back{
+    background:linear-gradient(135deg,#7c3aed,#ec4899);
+    color:white;
+    transform:rotateY(180deg);
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    padding:30px;
+}
+
+.back h2{
+    margin-bottom:20px;
+}
+
+.back p{
+    line-height:1.7;
+    font-size:16px;
+}
+
+.heart{
+    font-size:55px;
+    margin:20px 0;
+    animation:heartbeat 1s infinite;
+}
+
+@keyframes heartbeat{
+    0%,100%{transform:scale(1);}
+    50%{transform:scale(1.3);}
+}
+
+.credit{
+    margin-top:10px;
+    font-size:15px;
+    opacity:.9;
+}
+
+.btn{
+    margin-top:18px;
+    display:inline-block;
+    text-decoration:none;
+    color:white;
+    padding:14px 28px;
+    border-radius:40px;
+    background:linear-gradient(135deg,#00c6ff,#0072ff);
+    font-weight:bold;
+    transition:.4s;
+    box-shadow:0 12px 25px rgba(0,0,0,.35);
+}
+
+.btn:hover{
+    transform:translateY(-5px) scale(1.05);
+}
+
+.footer{
+    position:absolute;
+    bottom:18px;
+    color:white;
+    font-size:13px;
+    opacity:.8;
+    letter-spacing:1px;
+}
+</style>
 </head>
+
 <body>
 
-  <!-- Floating Hearts -->
-  <div class="heart" style="left:10%; animation-delay:0s;">❤️</div>
-  <div class="heart" style="left:20%; animation-delay:2s;">💖</div>
-  <div class="heart" style="left:35%; animation-delay:4s;">💕</div>
-  <div class="heart" style="left:50%; animation-delay:1s;">❤️</div>
-  <div class="heart" style="left:65%; animation-delay:3s;">💗</div>
-  <div class="heart" style="left:80%; animation-delay:5s;">💞</div>
+<div class="particles"></div>
 
-  <div class="card">
-    <h1>Happy Mother's Day ❤️</h1>
+<div class="card" id="card">
+<div class="inner">
 
-    <p class="subtitle">
-      Mere dil se, sirf aapke liye...
-    </p>
+<div class="side front">
+<h2>🤝</h2>
+<h1>Happy<br>Friendship Day</h1>
+<p>Tap or Hover to Open 💙</p>
+</div>
 
-    <div class="message">
-      Maa, <br><br>
+<div class="side back">
 
-      Aaj Mother’s Day hai, par mere liye har din aapka hi din hota hai.  
-      Aapne jo <span class="highlight">pyaar, support aur sacrifices</span> mere liye kiye hain,
-      unka shukriya main kabhi words me properly nahi bata sakta.  
-      Jab bhi life mushkil lagti hai, aapki baatein aur aapka saath mujhe strong bana deta hai.
-      <br><br>
+<h2>To My Dear Friend 💙</h2>
 
-      Aap sirf meri maa nahi ho, meri <span class="highlight">biggest strength</span> ho.  
-      Main jo bhi hoon, aapki wajah se hoon.
-      <br><br>
+<p>
+Friendship isn't measured by time,
+but by trust, memories, laughter,
+and standing together through every phase of life.
 
-      Thank you for always being there for me.  
-      Main aapse bohot pyaar karta hoon ❤️
-    </div>
+<br><br>
 
-    <div class="footer">
-      Love You Maa <span class="love">💖</span>
-    </div>
-  </div>
+May your life always be filled with happiness,
+success, peace, and amazing adventures.
+
+<br><br>
+
+Happy Friendship Day! ✨
+</p>
+
+<div class="heart">💙</div>
+
+<div class="credit">
+Written with ❤️ by <b>Nikhil</b>
+</div>
+
+<a class="btn"
+href="https://nikhilmishra-dev.vercel.app"
+target="_blank">
+🌐 Visit My Portfolio
+</a>
+
+</div>
+
+</div>
+</div>
+
+<div class="footer">
+Made with HTML • CSS • JavaScript
+</div>
+
+<script>
+// Mobile Flip
+const card=document.getElementById("card");
+card.addEventListener("click",()=>{
+card.classList.toggle("flip");
+});
+
+// Floating Emojis
+const container=document.querySelector(".particles");
+const emojis=["💙","✨","⭐","💖","🤝","🌟"];
+
+for(let i=0;i<35;i++){
+const span=document.createElement("span");
+span.innerHTML=emojis[Math.floor(Math.random()*emojis.length)];
+span.style.left=Math.random()*100+"%";
+span.style.fontSize=(18+Math.random()*22)+"px";
+span.style.animationDuration=(5+Math.random()*8)+"s";
+span.style.animationDelay=Math.random()*5+"s";
+container.appendChild(span);
+}
+</script>
 
 </body>
 </html>
