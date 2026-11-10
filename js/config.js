@@ -112,7 +112,7 @@ export const config = {
       "And then there's the pilot dream. I genuinely hope you get to fly someday, quite literally. Just remember, becoming a pilot means you'll have to be responsible up there. Can't have Miss Catalyst creating chaos at 30,000 feet.",
       "Jokes apart, I hope this year brings you a lot of happiness, new experiences, countless memories, amazing pictures (obviously), and plenty of opportunities to do all the crazy things you love.",
       "Never lose that natural talent, that little madness, or the habit of being unapologetically yourself.",
-      "And please, for once, accept that you're pretty good at what you do. Bas topper bolne pe itna objection mat kiya karo.",
+      "And please, for once, accept that you're pretty good at what you do. Bas topper bolne pe itna objection mat kiya karo Okie?? akhir Saumya ko bhi beat karna h!!!.",
       "**Happy Birthday once again! Keep being you.**",
     ],
     signature: "From your unofficial examiner, who has officially given up trying to convince you that you're a topper.",
