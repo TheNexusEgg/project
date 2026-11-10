@@ -1,0 +1,627 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Project Topper Mohtarma | Birthday Experience</title>
+    <meta name="description" content="A personalized interactive birthday experience dedicated to someone very special." />
+    <meta property="og:title" content="Project Topper Mohtarma | Birthday Experience" />
+    <meta property="og:description" content="A personalized interactive birthday experience dedicated to someone very special." />
+    <meta property="og:type" content="website" />
+
+    <!-- Clean SVG Star Favicon (no broken network assets) -->
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%238b5cf6'%3E%3Cpath d='M12 2l2.4 7.4h7.6l-6.2 4.5 2.4 7.4-6.2-4.5-6.2 4.5 2.4-7.4-6.2-4.5h7.6z'/%3E%3C/svg%3E" />
+
+    <!-- Google Fonts: Fraunces (Editorial Display) & Plus Jakarta Sans (Clean Modern Sans) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400..700;1,9..144,400..700&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" />
+
+    <!-- Foundation Stylesheets -->
+    <link rel="stylesheet" href="/css/main.css" />
+    <link rel="stylesheet" href="/css/animations.css" />
+  </head>
+  <body data-theme="dark">
+    <div class="app-shell">
+      <!-- 1. Header (Top Bar Contract) -->
+      <header class="site-header">
+        <div class="site-header-inner">
+          <div class="brand-title">
+            <span>✨</span>
+            <span>Project Topper Mohtarma</span>
+          </div>
+
+          <!-- Compact Floating Music Player Widget -->
+          <div id="music-player" class="music-player-widget" role="region" aria-label="Audio Player">
+            <div class="music-player-inner">
+              <div class="music-track-info">
+                <div class="music-playing-indicator" aria-hidden="true">
+                  <span class="bar bar-1"></span>
+                  <span class="bar bar-2"></span>
+                  <span class="bar bar-3"></span>
+                </div>
+                <div class="music-track-text">
+                  <span id="music-track-title" class="music-track-title">Ik Kudi</span>
+                  <span id="music-track-subtitle" class="music-track-subtitle">1 / 2</span>
+                </div>
+              </div>
+
+              <div class="music-controls">
+                <button id="music-btn-prev" type="button" class="music-btn" aria-label="Previous track" title="Previous track">
+                  <svg viewBox="0 0 24 24" width="14" height="14" fill="currentColor"><path d="M6 6h2v12H6zm3.5 6l8.5 6V6z"/></svg>
+                </button>
+                <button id="music-btn-play" type="button" class="music-btn music-btn-play" aria-label="Play or pause music" title="Play / Pause">
+                  <svg id="music-icon-play" viewBox="0 0 24 24" width="16" height="16" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
+                  <svg id="music-icon-pause" viewBox="0 0 24 24" width="16" height="16" fill="currentColor" style="display:none;"><path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z"/></svg>
+                </button>
+                <button id="music-btn-next" type="button" class="music-btn" aria-label="Next track" title="Next track">
+                  <svg viewBox="0 0 24 24" width="14" height="14" fill="currentColor"><path d="M6 18l8.5-6L6 6v12zM16 6v12h2V6h-2z"/></svg>
+                </button>
+                <button id="music-btn-mute" type="button" class="music-btn" aria-label="Mute or unmute" title="Mute / Unmute">
+                  <svg id="music-icon-unmuted" viewBox="0 0 24 24" width="14" height="14" fill="currentColor"><path d="M3 9v6h4l5 5V4L7 9H3zm13.5 3c0-1.77-1.02-3.29-2.5-4.03v8.05c1.48-.73 2.5-2.25 2.5-4.02zM14 3.23v2.06c2.89.86 5 3.54 5 6.71s-2.11 5.85-5 6.71v2.06c4.01-.91 7-4.49 7-8.77s-2.99-7.86-7-8.77z"/></svg>
+                  <svg id="music-icon-muted" viewBox="0 0 24 24" width="16" height="16" fill="currentColor" style="display:none;"><path d="M16.5 12c0-1.77-1.02-3.29-2.5-4.03v2.21l2.45 2.45c.03-.2.05-.41.05-.63zm2.5 0c0 .94-.2 1.82-.54 2.64l1.51 1.51C20.63 14.91 21 13.5 21 12c0-4.28-2.99-7.86-7-8.77v2.06c2.89.86 5 3.54 5 6.71zM4.27 3L3 4.27 7.73 9H3v6h4l5 5v-6.73l4.25 4.25c-.67.52-1.42.93-2.25 1.18v2.06c1.38-.31 2.63-.95 3.69-1.81L19.73 21 21 19.73l-9-9L4.27 3zM12 4L9.91 6.09 12 8.18V4z"/></svg>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <!-- 2. Guided Progress Stepper -->
+      <nav class="progress-bar-container" aria-label="Experience stages progress">
+        <div class="progress-bar-inner">
+          <span id="progress-label" class="progress-label">Stage 1 of 7: Entrance</span>
+          <div id="progress-steps" class="progress-steps" role="tablist">
+            <!-- Dynamically populated step nodes with strict locked states -->
+          </div>
+        </div>
+      </nav>
+
+      <!-- 3. Main Experience Viewport with 7 Planned Stage Sections -->
+      <main class="main-viewport">
+        <!-- Stage 1 — Secret Entrance -->
+        <section id="stage-1" class="stage-section is-active" aria-labelledby="stage-1-heading">
+          <div class="entrance-container">
+            <!-- Decorative Confidential Label -->
+            <div class="classified-badge">
+              <span class="indicator-dot"></span>
+              <span>CLASSIFIED BIRTHDAY FILE</span>
+            </div>
+
+            <div class="text-kicker">TOP SECRET</div>
+            <h1 id="stage-1-heading">PROJECT TOPPER MOHTARMA</h1>
+            <p>A birthday experience dedicated to one very particular person.</p>
+
+            <div class="card entrance-card anim-fade-in-up">
+              <form id="password-form" class="password-form" novalidate>
+                <div>
+                  <label for="password-input" class="form-label">Password Verification</label>
+                  <div class="input-wrapper">
+                    <input
+                      id="password-input"
+                      type="password"
+                      class="password-input"
+                      placeholder="Enter the secret password..."
+                      autocomplete="off"
+                      spellcheck="false"
+                      required
+                    />
+                    <button
+                      id="btn-toggle-password"
+                      type="button"
+                      class="password-toggle-btn"
+                      aria-label="Show password"
+                      title="Show password"
+                    >
+                      <span class="toggle-icon">👁️</span>
+                      <span class="toggle-label">Show</span>
+                    </button>
+                  </div>
+                </div>
+
+                <!-- Cheeky password hint -->
+                <div class="password-hint-box">
+                  <strong>Hint:</strong>
+                  <span>"<span data-config="security.hint">The title you keep denying.</span>"</span>
+                </div>
+
+                <!-- Dynamic feedback message container -->
+                <div id="password-feedback" class="password-feedback" aria-live="polite"></div>
+
+                <!-- Submit Button -->
+                <button id="btn-submit-password" type="submit" class="btn btn-primary btn-unlock">
+                  <span class="btn-label">Unlock the surprise</span>
+                </button>
+              </form>
+            </div>
+          </div>
+        </section>
+
+        <!-- Stage 2 — Welcome Screen -->
+        <section id="stage-2" class="stage-section" aria-labelledby="stage-2-heading">
+          <div class="welcome-container">
+            <div class="celebration-badge anim-float">
+              <span>✨</span>
+              <span>CHAPTER 2026 · CERTIFIED EDITION</span>
+            </div>
+
+            <div class="text-kicker">STAGE 02 · WELCOME</div>
+            <h1 id="stage-2-heading">Well well well... look who's a year wiser.</h1>
+
+            <div class="welcome-card anim-fade-in-up">
+              <h2 class="welcome-birthday-heading">
+                Happy Birthday, <span data-config="recipient.nickname">Miss Catalyst</span>!
+              </h2>
+
+              <p class="welcome-supporting-text">
+                A small website, a few surprises and absolutely no guarantee of academic honesty.
+              </p>
+
+              <!-- Main CTA to advance to Stage 3 -->
+              <button id="btn-welcome-cta" type="button" class="btn btn-primary btn-welcome-cta">
+                <span>Enter your birthday universe →</span>
+              </button>
+            </div>
+          </div>
+        </section>
+
+        <!-- Stage 3 — Photo Gallery (Batch 3) -->
+        <section id="stage-3" class="stage-section" aria-labelledby="stage-3-title">
+          <div class="gallery-container">
+            <div class="text-kicker">STAGE 03 · MEMORY ARCHIVE</div>
+            <h1 id="stage-3-title" data-config="gallery.title">The Main Character Archive</h1>
+            <p class="stage-subtitle" data-config="gallery.subtitle">
+              Curated photographic evidence of effortless brilliance and questionable study habits.
+            </p>
+
+            <!-- Responsive Photo Grid (Populated dynamically by GalleryController) -->
+            <div id="gallery-grid" class="gallery-grid" role="region" aria-label="Photo memory gallery">
+              <!-- Dynamically generated photo cards with graceful missing-image fallbacks -->
+            </div>
+          </div>
+        </section>
+
+        <!-- Stage 4 — The Official Topper Test (Batch 4) -->
+        <section id="stage-4" class="stage-section" aria-labelledby="stage-4-title">
+          <div class="quiz-container">
+            <div class="text-kicker">STAGE 04 · ACADEMIC BANTER</div>
+            <h1 id="stage-4-title" data-config="quiz.title">The Official Topper Test</h1>
+            <p class="stage-subtitle" data-config="quiz.subtitle">
+              Five questions. One very questionable examiner. Let's see how this goes.
+            </p>
+
+            <!-- 1. Quiz Intro View -->
+            <div id="quiz-view-intro" class="card quiz-card anim-fade-in-up">
+              <div class="quiz-intro-badge">
+                <span class="quiz-badge-icon" aria-hidden="true">📋</span>
+                <span>EXAMINATION PAPER #2026-TO</span>
+              </div>
+              <h2 class="quiz-card-title">Diagnostic Assessment of Topper Denial</h2>
+              <p class="quiz-card-desc">
+                An official evaluation into the alleged habits of effortless academic excellence, claiming not to have studied, and scoring top marks anyway.
+              </p>
+              <div class="quiz-meta-strip">
+                <span class="quiz-meta-item">📝 5 Scenarios</span>
+                <span class="quiz-meta-dot" aria-hidden="true">·</span>
+                <span class="quiz-meta-item">⏱️ Self-Paced</span>
+                <span class="quiz-meta-dot" aria-hidden="true">·</span>
+                <span class="quiz-meta-item">⚖️ Zero Judicial Mercy</span>
+              </div>
+              <button id="quiz-btn-start" type="button" class="btn btn-primary btn-quiz-cta">
+                <span class="btn-label">Begin Examination →</span>
+              </button>
+            </div>
+
+            <!-- 2. Active Question View -->
+            <div id="quiz-view-active" class="card quiz-card" style="display: none;">
+              <!-- Progress Indicator -->
+              <div class="quiz-progress-wrapper">
+                <div class="quiz-progress-header">
+                  <span id="quiz-progress-text" class="quiz-progress-text font-mono">Question 1 of 5</span>
+                  <span class="quiz-progress-label">Topper Diagnostic</span>
+                </div>
+                <div class="quiz-progress-track" role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100">
+                  <div id="quiz-progress-fill" class="quiz-progress-fill" style="width: 20%;"></div>
+                </div>
+              </div>
+
+              <!-- Question Heading -->
+              <h2 id="quiz-question-text" class="quiz-question-title font-display"></h2>
+
+              <!-- Options Grid (4 single-select choices) -->
+              <div id="quiz-options-container" class="quiz-options-grid" role="radiogroup" aria-labelledby="quiz-question-text">
+                <!-- Dynamically generated option buttons -->
+              </div>
+
+              <!-- Explanation Box (revealed upon answering) -->
+              <div id="quiz-explanation-box" class="quiz-explanation-card" style="display: none;">
+                <span class="explanation-icon" aria-hidden="true">💡</span>
+                <div class="explanation-content">
+                  <span class="explanation-title font-mono">Examiner's Note:</span>
+                  <p id="quiz-explanation-text" class="explanation-body"></p>
+                </div>
+              </div>
+
+              <!-- Bottom Action Area -->
+              <div class="quiz-action-bar">
+                <button id="quiz-btn-next" type="button" class="btn btn-primary" style="display: none;">
+                  <span class="btn-label">Next Question →</span>
+                </button>
+              </div>
+            </div>
+
+            <!-- 3. Results View -->
+            <div id="quiz-view-results" class="card quiz-card quiz-results-card" style="display: none;">
+              <div class="quiz-score-badge">
+                <span class="score-badge-label font-mono">FINAL SCORE</span>
+                <div class="score-value-row">
+                  <span id="quiz-result-score" class="score-number font-display">0 / 5</span>
+                </div>
+              </div>
+
+              <h2 id="quiz-result-title" class="quiz-result-title font-display"></h2>
+              <p id="quiz-result-message" class="quiz-result-message"></p>
+              <p id="quiz-result-wish" class="quiz-result-wish"></p>
+
+              <div class="quiz-results-actions">
+                <button id="quiz-btn-restart" type="button" class="btn btn-secondary">
+                  <span>↺ Retake Quiz</span>
+                </button>
+                <button id="quiz-btn-continue" type="button" class="btn btn-primary btn-quiz-continue">
+                  <span class="btn-label">Continue to Catch the Stars →</span>
+                </button>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Stage 5 — Catch the Stars Mini-Game (Batch 5) -->
+        <section id="stage-5" class="stage-section" aria-labelledby="stage-5-title">
+          <div class="game-container">
+            <div class="text-kicker">STAGE 05 · MINI-GAME</div>
+            <h1 id="stage-5-title" data-config="game.title">Catch the Stars</h1>
+            <p class="stage-subtitle" data-config="game.subtitle">
+              A little birthday challenge. Catch as many stars as you can before time runs out.
+            </p>
+
+            <!-- 1. Game Intro View -->
+            <div id="game-view-intro" class="card game-card anim-fade-in-up">
+              <div class="game-intro-badge">
+                <span class="game-badge-icon" aria-hidden="true">⭐</span>
+                <span>COSMIC REFLEX CHALLENGE</span>
+              </div>
+              <h2 class="game-card-title">Gather Birthday Starlight</h2>
+              <p class="game-card-desc">
+                Tap or click the glowing stars as they appear across the cosmic field. Gather as much starlight as you can in 30 seconds!
+              </p>
+              <div class="game-meta-strip">
+                <span class="game-meta-item">⏱️ 30 Seconds</span>
+                <span class="game-meta-dot" aria-hidden="true">·</span>
+                <span class="game-meta-item">👆 Tap / Click</span>
+                <span class="game-meta-dot" aria-hidden="true">·</span>
+                <span class="game-meta-item">🎯 Fast Reflexes</span>
+              </div>
+              <button id="game-btn-start" type="button" class="btn btn-primary btn-game-cta">
+                <span class="btn-label">Start Star Catching →</span>
+              </button>
+            </div>
+
+            <!-- 2. Active Game Play View -->
+            <div id="game-view-play" class="game-play-wrapper" style="display: none;">
+              <!-- HUD Header -->
+              <div class="game-hud">
+                <div class="game-hud-chip timer-chip">
+                  <span class="hud-label font-mono">TIME LEFT</span>
+                  <span id="game-timer-display" class="hud-value font-mono">30s</span>
+                </div>
+                <div class="game-hud-chip score-chip">
+                  <span class="hud-label font-mono">STARS CAUGHT</span>
+                  <span id="game-score-display" class="hud-value font-mono">0</span>
+                </div>
+                <button id="game-btn-stop" type="button" class="btn btn-secondary btn-sm hud-stop-btn" title="Finish round early">
+                  <span>Finish Early</span>
+                </button>
+              </div>
+
+              <!-- Interactive Game Arena -->
+              <div id="game-arena" class="game-arena" role="region" aria-label="Catch the stars arena">
+                <!-- Starlight target buttons dynamically spawn here -->
+              </div>
+            </div>
+
+            <!-- 3. Results View -->
+            <div id="game-view-results" class="card game-card game-results-card" style="display: none;">
+              <div class="game-score-badge">
+                <span class="score-badge-label font-mono">TOTAL GATHERED</span>
+                <div class="game-score-row">
+                  <span id="game-result-score" class="score-number font-display">0</span>
+                  <span class="score-unit">Stars</span>
+                </div>
+              </div>
+
+              <h2 id="game-result-title" class="game-result-title font-display"></h2>
+              <p id="game-result-message" class="game-result-message"></p>
+              <p id="game-result-wish" class="game-result-wish"></p>
+
+              <div class="game-results-actions">
+                <button id="game-btn-restart" type="button" class="btn btn-secondary">
+                  <span>↺ Catch Again</span>
+                </button>
+                <button id="game-btn-continue" type="button" class="btn btn-primary btn-game-continue">
+                  <span class="btn-label">Continue to Birthday Note →</span>
+                </button>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Stage 6 — Birthday Note (Batch 3) -->
+        <section id="stage-6" class="stage-section" aria-labelledby="stage-6-title">
+          <div class="note-container">
+            <div class="text-kicker">STAGE 06 · CONFIDENTIAL DISPATCH</div>
+            <h1 id="stage-6-title" data-config="birthdayNote.title">A Little Note For You</h1>
+            <p class="stage-subtitle" data-config="birthdayNote.subtitle">
+              Confidential Chapter · Topper Appreciation Archive
+            </p>
+
+            <!-- Stationery Letter Card -->
+            <article class="stationery-card anim-fade-in-up">
+              <!-- Decorative Letterhead Header -->
+              <div class="stationery-header">
+                <div class="stationery-stamp">
+                  <span class="stamp-icon" aria-hidden="true">✉️</span>
+                  <span class="stamp-label" data-config="birthdayNote.dateLabel">Chapter 2026 · Confidential Dispatch</span>
+                </div>
+                <div class="stationery-badge">FOR YOUR EYES ONLY</div>
+              </div>
+
+              <!-- Salutation -->
+              <div class="stationery-salutation font-display">
+                <span data-config="birthdayNote.salutation">Dear Miss Catalyst,</span>
+              </div>
+
+              <!-- Dynamic Note Paragraphs rendered from config.js -->
+              <div id="birthday-note-body" class="stationery-body">
+                <!-- Dynamically populated from config.birthdayNote.paragraphs -->
+              </div>
+
+              <!-- Signature & Postscript -->
+              <div class="stationery-footer">
+                <div class="stationery-signature font-display">
+                  <span class="signature-line">— <span data-config="birthdayNote.signature">From your favourite source of questionable advice</span></span>
+                </div>
+                <div class="stationery-postscript">
+                  <span data-config="birthdayNote.postscript">P.S. As always, any formal complaints regarding this website must be submitted to the Complaints Department (which is permanently closed) as the developer Doesnt want to Now just accept Silently .</span>
+                </div>
+              </div>
+            </article>
+          </div>
+        </section>
+
+        <!-- Stage 7 — The Birthday Finale (Batch 6) -->
+        <section id="stage-7" class="stage-section" aria-labelledby="stage-7-title">
+          <div class="finale-container">
+            <!-- 1. Intro Reveal View -->
+            <div id="finale-view-intro" class="card finale-card anim-fade-in-up">
+              <div class="finale-intro-badge">
+                <span class="finale-badge-icon" aria-hidden="true">🎁</span>
+                <span>FINAL CONFIDENTIAL DOSSIER</span>
+              </div>
+              <div class="text-kicker">STAGE 07 · GRAND FINALE</div>
+              <h1 id="stage-7-title" data-config="finale.title">One Last Thing...</h1>
+              <p class="stage-subtitle" data-config="finale.subtitle">
+                You've made it through the quiz, the stars and all the surprises. But we're not done just yet.
+              </p>
+              <div class="finale-envelope-visual">
+                <div class="envelope-ribbon" aria-hidden="true"></div>
+                <span class="envelope-emoji" aria-hidden="true">🎂</span>
+              </div>
+              <button id="finale-btn-reveal" type="button" class="btn btn-primary btn-finale-reveal">
+                <span class="btn-label" data-config="finale.revealButtonText">Reveal the surprise ✨</span>
+              </button>
+            </div>
+
+            <!-- 2. Active Celebration View -->
+            <div id="finale-view-celebration" class="finale-celebration-wrapper" style="display: none;">
+              <!-- Cake & Candle Section -->
+              <div class="card finale-cake-card anim-fade-in-up">
+                <div class="cake-header">
+                  <div class="celebration-badge">
+                    <span>✨</span>
+                    <span>WISH TIME</span>
+                  </div>
+                  <h2 class="cake-title font-display" data-config="finale.cakeHeading">Make a Birthday Wish!</h2>
+                  <p class="cake-subtitle" data-config="finale.cakeSubheading">
+                    Take a quiet moment, think of your biggest wish for the year ahead, and blow out the candle.
+                  </p>
+                </div>
+
+                <!-- Animated CSS Birthday Cake -->
+                <div class="cake-stage" aria-label="Animated birthday cake">
+                  <!-- Plate -->
+                  <div class="cake-plate"></div>
+                  <!-- Bottom Tier -->
+                  <div class="cake-tier cake-tier-bottom">
+                    <div class="cake-frosting-bottom"></div>
+                    <div class="cake-sprinkles">
+                      <span class="sprinkle s1"></span>
+                      <span class="sprinkle s2"></span>
+                      <span class="sprinkle s3"></span>
+                      <span class="sprinkle s4"></span>
+                      <span class="sprinkle s5"></span>
+                    </div>
+                  </div>
+                  <!-- Top Tier -->
+                  <div class="cake-tier cake-tier-top">
+                    <div class="cake-frosting-top"></div>
+                    <div class="cake-drips">
+                      <span class="drip d1"></span>
+                      <span class="drip d2"></span>
+                      <span class="drip d3"></span>
+                      <span class="drip d4"></span>
+                    </div>
+                  </div>
+                  <!-- Candle & Flame -->
+                  <div class="cake-candle">
+                    <div class="candle-wick"></div>
+                    <div id="cake-candle-flame" class="candle-flame"></div>
+                    <div id="cake-candle-smoke" class="candle-smoke"></div>
+                  </div>
+                </div>
+
+                <!-- Blow Candle CTA Button -->
+                <div class="cake-action-wrapper">
+                  <button id="finale-btn-wish" type="button" class="btn btn-primary btn-wish">
+                    <span class="btn-label" data-config="finale.makeWishButtonText">Make a Wish & Blow Candle 🕯️</span>
+                  </button>
+                </div>
+              </div>
+
+              <!-- Post-Wish Revealed Content (Final Message & Certificate) -->
+              <div id="finale-post-wish-reveal" class="finale-post-wish" style="display: none;">
+                <!-- Final Prominent Birthday Message -->
+                <div class="card finale-message-card anim-fade-in-up">
+                  <div class="message-sparkle-kicker">✦ CERTIFIED CELEBRATION ✦</div>
+                  <h2 class="final-message-title font-display">AND FINALLY... HAPPY BIRTHDAY! 🎂</h2>
+                  <p class="final-message-text" data-config="finale.finalMessage">
+                    Happy Birthday, Miss Catalyst! Keep smiling, keep shining, and keep being effortlessly exceptional. Here's to your happiest chapter yet!
+                  </p>
+                </div>
+
+                <!-- Digital Keepsake Certificate Award -->
+                <div class="certificate-container anim-fade-in-up">
+                  <div id="finale-certificate" class="certificate-card printable-certificate">
+                    <div class="certificate-inner-border">
+                      <div class="certificate-corner top-left" aria-hidden="true"></div>
+                      <div class="certificate-corner top-right" aria-hidden="true"></div>
+                      <div class="certificate-corner bottom-left" aria-hidden="true"></div>
+                      <div class="certificate-corner bottom-right" aria-hidden="true"></div>
+
+                      <div class="certificate-header">
+                        <span class="certificate-kicker font-mono" data-config="finale.certificate.header">OFFICIAL BIRTHDAY CITATION</span>
+                        <h3 class="certificate-title font-display" data-config="finale.certificate.title">Certificate of Academic & Personal Excellence</h3>
+                        <p class="certificate-subtitle" data-config="finale.certificate.subtitle">Awarded for successfully surviving another year with effortless brilliance.</p>
+                      </div>
+
+                      <div class="certificate-recipient-block">
+                        <span class="recipient-intro">Presented affectionately to</span>
+                        <h4 class="certificate-recipient font-display" data-config="recipient.nickname">Miss Catalyst</h4>
+                        <span class="certificate-formal-name" data-config="recipient.formalName">(Shreya Roy)</span>
+                      </div>
+
+                      <p class="certificate-achievement" data-config="finale.certificate.achievement">
+                        In recognition of unmatched intellect, heroic topper denial under sworn oath, master reflex speed, and consistently bringing warmth and wit to everyone around her.
+                      </p>
+
+                      <div class="certificate-footer">
+                        <div class="certificate-seal">
+                          <div class="seal-inner">
+                            <span class="seal-star">★</span>
+                            <span class="seal-text" data-config="finale.certificate.seal">VERIFIED TOPPER</span>
+                            <span class="seal-date" data-config="finale.certificate.date">2026</span>
+                          </div>
+                        </div>
+
+                        <div class="certificate-signature-block">
+                          <div class="signature-line font-display" data-config="finale.certificate.signature">From your favourite source of questionable advice</div>
+                          <span class="signature-title font-mono" data-config="finale.certificate.signatureTitle">Chief Examiner of Topper Allegations</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- Certificate Download & Print Buttons -->
+                  <div class="certificate-actions">
+                    <button id="finale-btn-download" type="button" class="btn btn-primary btn-sm">
+                      <span>📥 Download Certificate (PNG)</span>
+                    </button>
+                    <button id="finale-btn-print" type="button" class="btn btn-secondary btn-sm">
+                      <span>🖨️ Print / Save as PDF</span>
+                    </button>
+                  </div>
+                </div>
+
+                <!-- Final Navigation Options -->
+                <div class="finale-nav-options anim-fade-in-up">
+                  <button id="finale-btn-replay" type="button" class="btn btn-secondary">
+                    <span>↺ Replay Experience from Beginning</span>
+                  </button>
+                  <button id="finale-btn-back-note" type="button" class="btn btn-secondary">
+                    <span>← Back to Birthday Note</span>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </main>
+
+      <!-- Stage 3 Modal Lightbox Dialog -->
+      <div id="gallery-lightbox" class="gallery-lightbox" role="dialog" aria-modal="true" aria-hidden="true" aria-labelledby="lightbox-caption">
+        <div class="lightbox-scrim" aria-hidden="true"></div>
+        <div class="lightbox-dialog anim-fade-in-up">
+          <!-- Lightbox Top Controls -->
+          <div class="lightbox-header">
+            <div class="lightbox-counter-badge">
+              <span id="lightbox-counter" class="lightbox-counter">1 / 6</span>
+              <span class="separator" aria-hidden="true">·</span>
+              <span id="lightbox-tag" class="lightbox-tag">Exhibit #01</span>
+            </div>
+            <button id="lightbox-btn-close" type="button" class="lightbox-btn-close" aria-label="Close photo viewer" title="Close (Esc)">
+              <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.25" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <line x1="18" y1="6" x2="6" y2="18"></line>
+                <line x1="6" y1="6" x2="18" y2="18"></line>
+              </svg>
+            </button>
+          </div>
+
+          <!-- Lightbox Media Stage -->
+          <div class="lightbox-viewport">
+            <button id="lightbox-btn-prev" type="button" class="lightbox-nav-btn lightbox-btn-prev" aria-label="Previous photo" title="Previous (Left Arrow)">
+              <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <polyline points="15 18 9 12 15 6"></polyline>
+              </svg>
+            </button>
+
+            <div class="lightbox-media-container">
+              <img id="lightbox-img" class="lightbox-image" src="" alt="" />
+              <div id="lightbox-placeholder" class="lightbox-placeholder" style="display: none;"></div>
+            </div>
+
+            <button id="lightbox-btn-next" type="button" class="lightbox-nav-btn lightbox-btn-next" aria-label="Next photo" title="Next (Right Arrow)">
+              <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <polyline points="9 18 15 12 9 6"></polyline>
+              </svg>
+            </button>
+          </div>
+
+          <!-- Lightbox Footer Caption -->
+          <div class="lightbox-footer">
+            <p id="lightbox-caption" class="lightbox-caption"></p>
+          </div>
+        </div>
+      </div>
+
+      <!-- 4. Consistent Guided Navigation Bar -->
+      <footer class="nav-footer">
+        <div class="nav-footer-inner">
+          <button id="btn-prev" type="button" class="btn btn-secondary" disabled aria-disabled="true">
+            ← Back
+          </button>
+
+          <div class="nav-summary">
+            <div id="nav-summary-number" class="nav-summary-number">Stage 1 of 7</div>
+            <div id="nav-summary-title" class="nav-summary-title">Secret Entrance</div>
+          </div>
+
+          <button id="btn-next" type="button" class="btn btn-primary">
+            <span class="btn-label">Next Stage →</span>
+          </button>
+        </div>
+      </footer>
+    </div>
+
+    <!-- Authoritative Application Initializer (Vanilla ES6) -->
+    <script type="module" src="/js/main.js"></script>
+  </body>
+</html>
