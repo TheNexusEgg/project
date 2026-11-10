@@ -162,13 +162,13 @@ export const config = {
         id: 3,
         question: 'Fast forward a few years. Miss Catalyst is finally in a cockpit. What is the most likely reaction?',
         options: [
-          'Dream achieved. Now let me fly this thing!',
-          'Wait, can someone take a picture of me here first?',
-          'I am still not nervous. Definitely not. Okay, maybe a little.',
-          'So... how many passengers can I take on my first flight?'
+          'All focused on flying. Professional from day one.',
+          'A little nervous at first, but absolutely thrilled.',
+          'Already planning the perfect cockpit picture before takeoff.',
+          'Somehow turning even a routine flight into an adventure'
         ],
-        correctAnswer: 0,
-        explanation: 'All those pilot dreams finally turning real. Seriously, hope you get to experience this someday. ✈️'
+        correctAnswer: 1,
+        explanation: 'A little nervousness is probably inevitable, but seeing that dream come true would be worth it. Genuinely hope you get there someday ✈️'
       },
       {
         id: 4,
