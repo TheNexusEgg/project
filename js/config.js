@@ -126,90 +126,95 @@ export const config = {
   },
 
   // Stage 4 — The Official Topper Test Configuration
+  
+  // Stage 4 — The Official Topper Test Configuration
   quiz: {
-    title: 'The Official Topper Test',
-    subtitle: 'Five questions. One very questionable examiner. Let\'s see how this goes.',
-    instructions: 'Select the most accurate response for each scenario. Academic honesty not guaranteed.',
+    title: 'The Official Miss Catalyst Test',
+    subtitle: '5 questions. 1 examiner who thinks he knows you pretty well. Let’s see.',
+    instructions: 'No overthinking. Just pick the option that sounds most like you. Waise bhi, I made the questions. 😂',
+
     questions: [
       {
         id: 1,
-        question: 'Someone objectively calls you a topper. What\'s your immediate response?',
+        question: 'Someone calls you a topper. What happens next?',
         options: [
-          'Gracefully accept the compliment and take a bow',
-          'Vigorously deny all allegations on technical grounds',
-          'Blame the question paper for being accidentally easy',
-          'Look around suspiciously and change the subject',
+          'Finally! Took you long enough to notice.',
+          'Arre nahi yaar, aisa kuch bhi nahi hai.',
+          'Depends... who is asking and what do they want?',
+          'Change the topic before this gets awkward.'
         ],
         correctAnswer: 1,
-        explanation: 'Denial isn\'t just a reaction; for you, it\'s practically a refined art form.',
+        explanation: 'The classic Shreya response. Compliment received, compliment immediately rejected. Very predictable.'
       },
       {
         id: 2,
-        question: 'What\'s genuinely more consistent: your academic performance or your denial of it?',
+        question: 'You find a really good photo spot. What is the actual plan?',
         options: [
-          'The academic performance, obviously',
-          'The denial—it operates at a solid 100% frequency',
-          'Both are locked in a neck-and-neck championship',
-          'Neither, I was clearly asleep the whole semester',
+          'One picture and we move on. Simple.',
+          'A quick picture, maybe two if the lighting is good.',
+          'Wait wait, ek aur. This angle is better. No, the previous one was better. Take one more.',
+          'Forget pictures. I am here for the snacks.'
         ],
         correctAnswer: 2,
-        explanation: 'They feed off each other in a perpetual motion engine of effortless excellence.',
+        explanation: 'One picture? With that camera obsession? Nice joke. We both know this is going to take a while. 😂'
       },
       {
         id: 3,
-        question: 'It\'s the night before a major exam or presentation. What is your declared status?',
+        question: 'Fast forward a few years. Miss Catalyst is finally in a cockpit. What is the most likely reaction?',
         options: [
-          '"I haven\'t even opened the syllabus yet!"',
-          '"Fully prepared and turning in early for 8 hours of sleep"',
-          '"I have written a 90-page revision dossier"',
-          '"Wait... there\'s an evaluation tomorrow?"',
+          'Dream achieved. Now let me fly this thing!',
+          'Wait, can someone take a picture of me here first?',
+          'I am still not nervous. Definitely not. Okay, maybe a little.',
+          'So... how many passengers can I take on my first flight?'
         ],
         correctAnswer: 0,
-        explanation: 'The classic declaration of total unpreparedness, right before scoring near perfection.',
+        explanation: 'All those pilot dreams finally turning real. Seriously, hope you get to experience this someday. ✈️'
       },
       {
         id: 4,
-        question: 'If the marks speak for themselves, why is the defence team still preparing an appeal?',
+        question: 'A normal, peaceful day suddenly becomes interesting. Why?',
         options: [
-          'Because the evaluator clearly made a severe grading error in my favour',
-          'To demand a strict re-check to lower the final score',
-          'Because admitting brilliance is strictly against personal policy',
-          'What marks? I wasn\'t even in the exam hall',
+          'Someone started an unnecessary argument.',
+          'A completely random plan appeared out of nowhere.',
+          'There was some unexpected drama in the class.',
+          'Miss Catalyst got one of her ideas again. Nobody knows what happens next.'
         ],
-        correctAnswer: 2,
-        explanation: 'Admitting to being a topper would ruin the mystique of pretending you didn\'t study.',
+        correctAnswer: 3,
+        explanation: 'Sometimes the plan is the plan. Sometimes YOU are the plot twist. Nobody is fully prepared.'
       },
       {
         id: 5,
-        question: 'What should the official title of this birthday investigation be?',
+        question: 'If someone had to describe Miss Catalyst in one line, which one gets closest?',
         options: [
-          'Casual Bystander with Accidental Top Scores',
-          'The World\'s Most Reluctant Genius',
-          'Certified Topper Mohtarma (Title Under Permanent Appeal)',
-          'All of the above simultaneously',
+          'A perfectly organised person who always has everything figured out.',
+          'A serious student who never gets distracted by anything.',
+          'Naturally talented, camera-ready, slightly crazy and impossible to predict.',
+          'A quiet person who prefers staying away from all the fun.'
         ],
-        correctAnswer: 3,
-        explanation: 'The investigation concludes: all charges of brilliance and effortless charm are confirmed!',
-      },
+        correctAnswer: 2,
+        explanation: 'A little talent, a little madness, a camera always nearby and absolutely no guarantee of what comes next. Sounds familiar?'
+      }
     ],
+
     results: {
       high: {
         scoreRange: '5/5',
-        title: 'Supreme Topper Confirmed',
-        message: 'The allegations are officially undeniable. Even the highest constitutional court would dismiss your appeal in seconds.',
+        title: 'Okay, You Know Yourself!',
+        message: 'Not bad at all. Either you know yourself pretty well, or you have been secretly studying the examiner’s question paper.'
       },
       medium: {
         scoreRange: '3–4/5',
-        title: 'Distinguished Academic in Denial',
-        message: 'A remarkably strong showing. You attempted to downplay your brilliance, but the examiner saw right through your defense.',
+        title: 'Miss Catalyst, Under Review',
+        message: 'A decent attempt! A few answers are still questionable, but honestly, even your examiner cannot predict you every time.'
       },
       low: {
         scoreRange: '0–2/5',
-        title: 'Master of Tactical Understatement',
-        message: 'Either the examiner prepared a wildly unfair paper, or you deliberately missed questions to protect your cover.',
-      },
+        title: 'Who Are You and What Have You Done?',
+        message: 'Hmm. Either these questions were difficult, or Miss Catalyst has successfully managed to surprise even the person who wrote them.'
+      }
     },
-    birthdayWish: 'Either way, Happy Birthday! May your new year bring zero exam stress, endless laughter, and boundless success.',
+
+    birthdayWish: 'Whatever your score, Happy Birthday! Keep chasing those big dreams, collecting pictures, making memories and being your wonderfully unpredictable self.'
   },
 
   // Stage 5 — Catch the Stars Mini-Game Configuration
