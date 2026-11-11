@@ -163,7 +163,7 @@ export const config = {
         question: 'Fast forward a few years. Miss Catalyst is finally in a cockpit. What is the most likely reaction?',
         options: [
           'All focused on flying. Professional from day one Serious on the go 😐',
-          'A little nervous at first, but absolutely thrilled.😬',
+          'A little nervous at first, but absolutely thrilled.😎😝',
           'Already planning the perfect cockpit picture before takeoff.😅',
           'Somehow turning even a routine flight into an adventure😜'
         ],
@@ -177,10 +177,10 @@ export const config = {
           'Someone started an unnecessary argument.',
           'bas aise hi random plans🙂',
           'class me fir kuch kand',
-          'Miss Catalyst got one of her ideas again. then lets say bunk hua ya kisi ka roast 😁'
+          'Miss Catalyst got one of her ideas again. Then bunk hua ya kisi ka roast wo to wo hi jane😁'
         ],
         correctAnswer: 3,
-        explanation: 'Sometimes the plan is the plan. Sometimes YOU are the plot twist. Nobody is fully prepared.'
+        explanation: 'Sometimes the plan is the plan. Sometimes YOU are the plot twist. Nobody is fully prepared.✨️'
       },
       {
         id: 5,
