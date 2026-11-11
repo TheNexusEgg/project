@@ -230,12 +230,12 @@ export const config = {
       high: {
         threshold: 20,
         title: 'Cosmic Reflex Master!',
-        message: 'Okay, that was genuinely impressive. Certified lightning reflexes and stellar precision.',
+        message: 'Okay, that was genuinely impressive. Topper Yha bhi nice nice lightning Speed and precision.',
       },
       medium: {
         threshold: 10,
         title: 'Starlight Collector!',
-        message: 'Not bad at all! A few sneaky stars escaped, but you gathered a brilliant constellation.',
+        message: 'Not bad at all! kuch stars reh gye Still good',
       },
       low: {
         threshold: 0,
@@ -261,12 +261,12 @@ export const config = {
       title: 'Certificate of Academic & Personal Excellence',
       subtitle: 'Awarded for successfully surviving another year with effortless brilliance.',
       recipient: 'Miss Catalyst',
-      formalName: 'Shreya Roy',
-      achievement: 'In recognition of unmatched intellect, heroic topper denial under sworn oath, master reflex speed, and consistently bringing warmth and wit to everyone around her.',
+      formalName: 'Miss Shreya ',
+      achievement: 'In recognition of unmatched intellect, heroic denial of her brilliance and not accepting she is a topper , master typing speed, and consistent Activation Energy bringing warmth Chaos To everyone around Her.',
       seal: 'VERIFIED 100% TOPPER',
       date: 'Chapter 2026 · Official Edition',
       signature: 'From your unofficial examiner, still waiting for you to admit you\'re a topper.',
-      signatureTitle: 'By Chief Examiner of Topper Allegations,Nikhil',
+      signatureTitle: 'By Chief Examiner of Topper Allegations, Nikhil',
     },
   },
 
