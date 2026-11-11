@@ -10,7 +10,7 @@ export const config = {
   // Recipient details
   recipient: {
     nickname: 'Miss Catalyst',
-    honoraryTitle: 'Topper Mohtarma',
+    honoraryTitle: 'The undercover topper',
     formalName: 'Shreya',
   },
 
