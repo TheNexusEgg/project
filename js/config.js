@@ -131,41 +131,41 @@ export const config = {
   quiz: {
     title: 'The Official Miss Catalyst Test',
     subtitle: '5 questions. 1 examiner who thinks he knows you pretty well. Let’s see.',
-    instructions: 'No overthinking. Just pick the option that sounds most like you. Waise bhi, I made the questions. 😂',
+    instructions: 'No overthinking. Just pick the option that sounds most like you. Waise bhi, I made the questions. 😁',
 
     questions: [
       {
         id: 1,
         question: 'Someone calls you a topper. What happens next?',
         options: [
-          'Finally! Took you long enough to notice.',
+          'Yes! I am🤓',
           'Arre nahi yaar, aisa kuch bhi nahi hai....',
-          'Depends... who is asking and what do they want.',
+          'Depends... who is asking? ',
           'Topic change to something else 🙃'
         ],
         correctAnswer: 1,
-        explanation: 'The classic Shreya response. Compliment received, compliment immediately rejected. Very predictable.'
+        explanation: 'The classic Shreya response. Compliment received, compliment immediately rejected. Very predictable😶.'
       },
       {
         id: 2,
         question: 'You find a really good photo spot. What is the actual plan?',
         options: [
           'One picture and we move on. Simple.',
-          'A quick picture, maybe two if the lighting is good.',
-          'Wait umm one in this pose one in this filter 😭 etc. and then Take one more.',
-          'Forget pictures. I am here for the snacks.'
+          'A quick picture, maybe two if the lighting is good.😗',
+          'Wait one in this filter nahi yar acchi nhi h dusri filter nhi dusra pose 😭 etc. and then Take one more till eternity.',
+          'picture chodo khana khao bhook lagi h 🥱'
         ],
         correctAnswer: 2,
-        explanation: 'One picture? With that camera obsession? Nice joke. We both know this is going to take a while. 😂'
+        explanation: 'One picture? With that camera obsession? 100-200 se pehle to rukne nhi wali tum 🤣 btw 4th option bhi match karta h yad ho to konsi bat kar rha me 😁'
       },
       {
         id: 3,
         question: 'Fast forward a few years. Miss Catalyst is finally in a cockpit. What is the most likely reaction?',
         options: [
-          'All focused on flying. Professional from day one.',
-          'A little nervous at first, but absolutely thrilled.',
-          'Already planning the perfect cockpit picture before takeoff.',
-          'Somehow turning even a routine flight into an adventure'
+          'All focused on flying. Professional from day one Serious on the go 😐',
+          'A little nervous at first, but absolutely thrilled.😬',
+          'Already planning the perfect cockpit picture before takeoff.😅',
+          'Somehow turning even a routine flight into an adventure😜'
         ],
         correctAnswer: 1,
         explanation: 'A little nervousness is probably inevitable, but seeing that dream come true would be worth it. Genuinely hope you get there someday ✈️'
@@ -175,16 +175,16 @@ export const config = {
         question: 'A normal, peaceful day suddenly becomes interesting. Why?',
         options: [
           'Someone started an unnecessary argument.',
-          'A completely random plan appeared out of nowhere.',
-          'There was some unexpected drama in the class.',
-          'Miss Catalyst got one of her ideas again. Nobody knows what happens next.'
+          'bas aise hi random plans🙂',
+          'class me fir kuch kand',
+          'Miss Catalyst got one of her ideas again. then lets say bunk hua ya kisi ka roast 😁'
         ],
         correctAnswer: 3,
         explanation: 'Sometimes the plan is the plan. Sometimes YOU are the plot twist. Nobody is fully prepared.'
       },
       {
         id: 5,
-        question: 'If someone had to describe Miss Catalyst in one line, which one gets closest?',
+        question: 'If someone had to describe Miss Catalyst in one line, which one gets closest?🤔',
         options: [
           'A perfectly organised person who always has everything figured out.',
           'A serious student who never gets distracted by anything.',
@@ -192,7 +192,7 @@ export const config = {
           'A quiet person who prefers staying away from all the fun.'
         ],
         correctAnswer: 2,
-        explanation: 'A little talent, a little madness, a camera always nearby and absolutely no guarantee of what comes next. Sounds familiar?'
+        explanation: 'A little talent, a little madness, a camera always nearby and absolutely no guarantee of what comes next. Sounds familiar?🤭😁 ig so'
       }
     ],
 
