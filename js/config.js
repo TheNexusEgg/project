@@ -139,9 +139,9 @@ export const config = {
         question: 'Someone calls you a topper. What happens next?',
         options: [
           'Finally! Took you long enough to notice.',
-          'Arre nahi yaar, aisa kuch bhi nahi hai.',
-          'Depends... who is asking and what do they want?',
-          'Change the topic before this gets awkward.'
+          'Arre nahi yaar, aisa kuch bhi nahi hai....',
+          'Depends... who is asking and what do they want.',
+          'Topic change to something else 🙃'
         ],
         correctAnswer: 1,
         explanation: 'The classic Shreya response. Compliment received, compliment immediately rejected. Very predictable.'
@@ -152,7 +152,7 @@ export const config = {
         options: [
           'One picture and we move on. Simple.',
           'A quick picture, maybe two if the lighting is good.',
-          'Wait wait, ek aur. This angle is better. No, the previous one was better. Take one more.',
+          'Wait umm one in this pose one in this filter 😭 etc. and then Take one more.',
           'Forget pictures. I am here for the snacks.'
         ],
         correctAnswer: 2,
@@ -188,7 +188,7 @@ export const config = {
         options: [
           'A perfectly organised person who always has everything figured out.',
           'A serious student who never gets distracted by anything.',
-          'Naturally talented, camera-ready, slightly crazy and impossible to predict.',
+          'Naturally talented, camera-ready, slightly crazy and impossible to predict.😝',
           'A quiet person who prefers staying away from all the fun.'
         ],
         correctAnswer: 2,
@@ -199,7 +199,7 @@ export const config = {
     results: {
       high: {
         scoreRange: '5/5',
-        title: 'Okay, You Know Yourself!',
+        title: 'Okay, Hmm You Know Yourself!',
         message: 'Not bad at all. Either you know yourself pretty well, or you have been secretly studying the examiner’s question paper.'
       },
       medium: {
