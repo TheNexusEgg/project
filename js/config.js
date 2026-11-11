@@ -116,7 +116,7 @@ export const config = {
       "**Happy Birthday once again! Keep being you.**",
     ],
     signature: "From your unofficial examiner, still trying to prove you're a topper.",
-    postscript: 'P.S. As always, any formal complaints regarding this website must be submitted in triplicate to the Complaints Department (which is permanently closed).',
+    postscript: 'P.S. As always, any formal complaints regarding this website must be submitted to the Complaints Department (which is permanently closed) as the developer Doesn\'t want to Now just accept Silently .',
   },
 
   // Alias for backward compatibility
